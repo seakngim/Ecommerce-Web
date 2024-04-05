@@ -1,0 +1,11 @@
+.container {
+	@apply h-screen grid place-content-center ;
+}
+
+.heading {
+	@apply flex gap-2 my-4 mx-auto text-4xl text-[#253C95] uppercase font-bold;
+}
+
+.title {
+	@apply flex gap-2 my-4 mx-auto text-xl text-[#253C95] uppercase font-bold;
+}
