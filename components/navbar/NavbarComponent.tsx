@@ -9,6 +9,7 @@ import {
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { MenuList } from "./menu";
+import Image from "next/image";
 
 export default function HeaderComponent() {
   const [menu, setMenu] = useState(MenuList);
@@ -22,8 +23,10 @@ export default function HeaderComponent() {
     >
       <div className="container mx-auto flex items-center justify-between">
         <NavbarBrand href="https://istad.co/">
-          <img
-            className="mr-3 h-6 sm:h-9"
+          <Image
+              width={40}
+              height={40}
+            className="mr-3"
             src="https://istad.co/resources/img/logo_md.png"
             alt="Cstad Logo"
           />

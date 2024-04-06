@@ -12,6 +12,7 @@ import {
   RiGlobalFill,
   RiYoutubeFill,
 } from "react-icons/ri";
+import Image from "next/image";
 // import { Metadata } from "next";
 
 // export const metadata: Metadata = {
@@ -37,7 +38,8 @@ export default function page() {
         </motion.div>
         <section className="grid lg:grid-cols-2 lg:gap-8 my-5">
           <div className="relative max-w-auto overflow-hidden rounded-lg bg-cover bg-no-repeat">
-            <img
+            <Image
+            width={200} height={200}
               className="transition w-full duration-300 rounded-lg hover:scale-110"
               src="https://lh3.googleusercontent.com/p/AF1QipN4PxveGztzradyBXeHV5E6NBHBLOS41pty7xfQ=s680-w680-h510"
               alt="image"

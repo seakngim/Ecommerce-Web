@@ -99,9 +99,9 @@ export default function Login() {
         <Form className=" bg-gray-100 p-4 rounded-lg w-96">
           <div className={`${style.title}`}>
             <Image
-              src="https://istad.co/resources/img/logo_md.png"
               width={10}
               height={10}
+              src="https://istad.co/resources/img/logo_md.png"
               alt="Cstad Logo"
             />
             <h1>Form Login</h1>
@@ -119,6 +119,42 @@ export default function Login() {
             />
             <ErrorMessage
               name="email"
+              component="section"
+              className={`${style.error}`}
+            />
+          </div>
+
+          {/* First Name */}
+          <div className="mb-5">
+            <label className={`${style.label}`} htmlFor="first_name">
+              First Name
+            </label>
+            <Field
+              type="text"
+              name="first_name"
+              id="first_name"
+              className={`${style.input}`}
+            />
+            <ErrorMessage
+              name="first_name"
+              component="section"
+              className={`${style.error}`}
+            />
+          </div>
+
+          {/* Last Name */}
+          <div className="mb-5">
+            <label className={`${style.label}`} htmlFor="last_name">
+              Last Name
+            </label>
+            <Field
+              type="text"
+              name="last_name"
+              id="last_name"
+              className={`${style.input}`}
+            />
+            <ErrorMessage
+              name="last_name"
               component="section"
               className={`${style.error}`}
             />
@@ -155,6 +191,36 @@ export default function Login() {
             />
           </div>
 
+          {/* Password2 */}
+          <div className="mb-5">
+            <label className={`${style.label}`} htmlFor="password2">
+              Password
+            </label>
+            <div className="relative">
+              <Field
+                type={showPassword ? "text" : "password"}
+                name="password2"
+                id="password2"
+                className={`${style.input}`}
+              />
+              {!showPassword ? (
+                <IoEyeOffSharp
+                  onClick={() => handleShowPassword()}
+                  className="cursor-pointer absolute right-2 top-4"
+                />
+              ) : (
+                <IoEyeSharp
+                  onClick={() => handleShowPassword()}
+                  className="cursor-pointer absolute right-2 top-4"
+                />
+              )}
+            </div>
+            <ErrorMessage
+              name="password2"
+              component="section"
+              className={`${style.error}`}
+            />
+          </div>
           <div className="flex gap-2">
             {/* button submit */}
             <button type="submit" className={`${style.btncancel}`}>

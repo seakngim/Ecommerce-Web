@@ -20,7 +20,7 @@ export default function Home() {
       <section>
       </section>
       {/* section product */}
-      <section className="my-6 container mx-auto grid lg:grid-cols-5 md:grid-cols-2 grid-flow-row gap-4">
+      <section className="my-6 container mx-auto grid lg:grid-cols-4 md:grid-cols-2 grid-flow-row gap-4">
         {products.map((product: any, index) => (
           <CardProduct
             onClick={() => router.push(`/view/${product.id}`)}

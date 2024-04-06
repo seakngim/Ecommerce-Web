@@ -19,6 +19,8 @@ export default function FooterComponent() {
               href="https://istad.co/"
               src="https://istad.co/resources/img/logo_md.png"
               alt="Cstad Logo"
+              width={10}
+              height={10}
             />
             <p>Start your IT career with CSTAD</p>
           </div>

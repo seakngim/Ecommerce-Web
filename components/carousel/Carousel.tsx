@@ -1,11 +1,12 @@
 import { Carousel } from "flowbite-react";
+import Image from "next/image";
 import React from "react";
 
 export default function page() {
   return (
     <Carousel className="h-screen pb-28">
       <div>
-        <img
+        <Image
           src="https://istad.co/resources/img/slide/slide-3.jpg"
           alt="..."
           className="h-screen w-full rounded-0 opacity-70"
@@ -34,7 +35,7 @@ export default function page() {
         </div>
       </div>
       <div>
-        <img
+        <Image
           src="https://istad.co/resources/img/slide/slide-2.jpg"
           alt="..."
           className="h-screen w-full rounded-0 opacity-90"
@@ -59,7 +60,7 @@ export default function page() {
         </div>
       </div>
       <div>
-        <img
+        <Image
           src="https://istad.co/resources/img/slide/slide-1.jpg"
           alt="..."
           className="h-screen w-full rounded-0 opacity-90"

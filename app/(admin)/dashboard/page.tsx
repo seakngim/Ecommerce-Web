@@ -39,7 +39,7 @@ export default function Dashboard() {
     {
       name: "Image",
       selector: (row): any => (
-        <img className="w-16 h-16" src={row.image} alt={row.image} />
+        <Image width={16} height={16} src={row.image} alt={row.image} />
       ),
       sortable: true,
     },
