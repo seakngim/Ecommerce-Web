@@ -20,17 +20,21 @@ export default function CardProduct({
 }: PropsType) {
   return (
     <Card
-      className="max-w-sm"
+      className="max-w-sm mx-auto border-0 hover:shadow-lg duration-300"
       renderImage={() => (
-        <img
-          src={image}
-          alt={name}
-          className="h-80 object-cover overflow-hidden"
-        />
+        <div className="relative rounded-t-lg max-w-auto overflow-hidden bg-cover bg-no-repeat">
+          <Image
+            src={image}
+            alt={name}
+            width={384}
+            height={150}
+            className="hover:scale-125 rounded-t-lg h-80"
+          />
+        </div>
       )}
     >
-     <div className=" -my-20">
-       <h5 className="line-clamp-1 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+      <div className=" -my-20">
+        <h5 className="line-clamp-1 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
           {name}
         </h5>
         <div className="mb-5 mt-2.5 flex items-center">
@@ -45,8 +49,7 @@ export default function CardProduct({
           </button>
           {/* <button onClick={onClick}  className="justify-between rounded-full w-full py-2 text-center text-white space-x-3 bg-[#253C95] mt-4 text-md font-bold dark:bg-zinc-800">view</button> */}
         </div>
-     </div>
-        
+      </div>
     </Card>
   );
 }

@@ -13,17 +13,11 @@ import Image from "next/image";
 type ValueTypes = {
   email: string;
   password1: string;
-  password2: string;
-  first_name: string;
-  last_name: string;
 };
 
 const initialValues: ValueTypes = {
   email: "",
   password1: "",
-  password2: "",
-  first_name: "",
-  last_name: "",
 };
 
 // 1- At least one upper case English letter, (?=.*[A-Z])
@@ -100,8 +94,8 @@ export default function Login() {
           <div className={`${style.title}`}>
             <Image
               src="https://istad.co/resources/img/logo_md.png"
-              width={10}
-              height={10}
+              width={40}
+              height={40}
               alt="Cstad Logo"
             />
             <h1>Form Login</h1>
@@ -162,7 +156,7 @@ export default function Login() {
             </button>
             {/* button submit */}
             <button type="submit" className={`${style.btnsubmit}`}>
-              Submit
+              Log In
             </button>
           </div>
         </Form>

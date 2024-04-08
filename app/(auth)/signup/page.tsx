@@ -99,12 +99,12 @@ export default function Login() {
         <Form className=" bg-gray-100 p-4 rounded-lg w-96">
           <div className={`${style.title}`}>
             <Image
-              width={10}
-              height={10}
+              width={40}
+              height={40}
               src="https://istad.co/resources/img/logo_md.png"
               alt="Cstad Logo"
             />
-            <h1>Form Login</h1>
+            <h1>Form Sign up</h1>
           </div>
           {/* Email */}
           <div className="mb-5">
@@ -228,7 +228,7 @@ export default function Login() {
             </button>
             {/* button submit */}
             <button type="submit" className={`${style.btnsubmit}`}>
-              Submit
+              Sign Up
             </button>
           </div>
         </Form>

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Button, Modal } from "flowbite-react";
 import Image from "next/image";
 import DataTable, { TableColumn } from "react-data-table-component";
-import { RiEditLine, RiDeleteBin3Line   } from "react-icons/ri";
+import { RiEditLine, RiDeleteBin3Line, RiEyeLine } from "react-icons/ri";
 
 export default function Dashboard() {
   const [products, setProducts] = useState<ProductType[]>([]);
@@ -66,12 +66,14 @@ export default function Dashboard() {
             onClick={() => handleViewProduct(row)}
             className="text-blue-600 mx-2"
           >
-            view
+            <RiEyeLine />
           </button>
           <button className="text-yellow-400 mx-2">
             <RiEditLine />
           </button>
-          <button className="text-red-600 mx-2"><RiDeleteBin3Line  /></button>
+          <button className="text-red-600 mx-2">
+            <RiDeleteBin3Line />
+          </button>
         </div>
       ),
     },
@@ -92,19 +94,28 @@ export default function Dashboard() {
       <Modal show={openModal} onClose={() => setOpenModal(false)}>
         <Modal.Header>Product Detial</Modal.Header>
         <Modal.Body>
-          <div className="space-y-6">
+          <div className="space-y-6 grid grid-cols-2">
             <Image
               src={productDetail?.image || imagePlaceholder}
               alt={productDetail?.name || "Untitle"}
               width={250}
               height={300}
             />
-            <h3 className="text-3xl text-gray-700">
-              {productDetail?.name || "Untitle"}
-            </h3>
-            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-              {productDetail?.description || "No description"}
-            </p>
+            <div>
+              <h3 className="text-3xl text-gray-700">
+                {productDetail?.name || "Untitle"}
+              </h3>
+              <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                {productDetail?.description || "No description"}
+              </p>
+              <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                <span>Price:</span> $ {productDetail?.price || "No price"}
+              </p>
+              <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                <span>Category: </span>
+                {productDetail?.category || "No category"}
+              </p>
+            </div>
           </div>
         </Modal.Body>
       </Modal>

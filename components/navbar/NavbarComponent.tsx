@@ -19,7 +19,7 @@ export default function HeaderComponent() {
     <Navbar
       fluid
       rounded
-      className="text-[#253C95] shadow-lg"
+      className="text-[#253C95] shadow-lg sticky top-0"
     >
       <div className="container mx-auto flex items-center justify-between">
         <NavbarBrand href="https://istad.co/">

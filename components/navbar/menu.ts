@@ -10,7 +10,7 @@ export const MenuList = [
         active: true,
     },
     {
-        name: "policy",
+        name: "Privacy Policy",
         path: "/policy",
         active: false,
     },

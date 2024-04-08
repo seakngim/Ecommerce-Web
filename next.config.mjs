@@ -2,6 +2,7 @@
 const nextConfig = {
   output: "standalone",
   images: {
+    // domains: ['store.istad.co'],
     remotePatterns: [
       {
         hostname: 'store.istad.co',
@@ -11,6 +12,9 @@ const nextConfig = {
       },
       {
         hostname: 'fakestoreapi.com',
+      },
+      {
+        hostname: 'lh3.googleusercontent.com',
       },
     ],
   },

@@ -1,0 +1,3 @@
+.heading {
+	@apply my-5 text-xl md:text-2xl lg:text-4xl text-[#253C95] uppercase font-bold text-center relative z-20;
+}

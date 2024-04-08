@@ -14,7 +14,7 @@ export const ConfirmIcon = ({ color = "#333", classname = "w-16 h-16" }) => {
 export const MenuIcon = ({
 	color = "#333",
 	classname = "w-16 h-16",
-	onClick = () => {},
+	onClick = () => { },
 }) => {
 	return (
 		<svg

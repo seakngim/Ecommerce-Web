@@ -9,3 +9,12 @@
 .title {
 	@apply flex gap-2 my-4 mx-auto text-xl text-[#253C95] uppercase font-bold;
 }
+
+.decription {
+	@apply flex tracking-widest text-sm list-disc text-gray-500 text-justify;
+} 
+
+.list {
+	@apply line-clamp-1 flex gap-2 hover:underline hover:underline-offset-4;
+}
+

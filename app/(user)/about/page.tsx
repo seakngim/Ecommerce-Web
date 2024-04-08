@@ -11,8 +11,11 @@ import {
   RiMailFill,
   RiGlobalFill,
   RiYoutubeFill,
+  RiArrowRightDoubleLine,
+  RiCheckDoubleFill,
 } from "react-icons/ri";
 import Image from "next/image";
+import { missionVisionSloganList } from "./list";
 // import { Metadata } from "next";
 
 // export const metadata: Metadata = {
@@ -39,17 +42,19 @@ export default function page() {
         <section className="grid lg:grid-cols-2 lg:gap-8 my-5">
           <div className="relative max-w-auto overflow-hidden rounded-lg bg-cover bg-no-repeat">
             <Image
-            width={200} height={200}
-              className="transition w-full duration-300 rounded-lg hover:scale-110"
-              src="https://lh3.googleusercontent.com/p/AF1QipN4PxveGztzradyBXeHV5E6NBHBLOS41pty7xfQ=s680-w680-h510"
+              width={200}
+              height={200}
+              className="transition w-full h-full duration-300 rounded-lg hover:scale-110"
+              src="https://lh3.googleusercontent.com/p/AF1QipMJxGS9_pe91tEqz6zYRrVH_kdK4h9X2b18cFpa=s680-w680-h510"
               alt="image"
             />
           </div>
           <div>
-            <h1 className={`${style.title}`}>
+            <h3 className={`${style.title}`}>
+              {/* <RiArrowRightDoubleLine className="flex-none mt-1 text-[#DF9A27]" /> */}
               WHAT IS CENTER OF SCIENCE AND TECHNOLOGY ADVANCED DEVELOPMENT?
-            </h1>
-            <p className="md:line-clamp-6 indent-8 text-justify list-disc tracking-widest">
+            </h3>
+            <p className="indent-8 text-justify list-disc tracking-widest pb-5">
               CSTAD is a noteworthy science and technology center in Cambodia.
               CSTAD has routed Cambodian students to advanced science and
               technology, research, and develop digital skills and our graduates
@@ -63,79 +68,62 @@ export default function page() {
         {/* section mission and vision */}
         <section className="grid lg:grid-cols-2 lg:gap-8 my-5">
           <div>
-            {/* section mission  */}
-            <section>
-              <h1 className={`${style.title}`}>Mission</h1>
-              <ul className="lg:mt-4 lg:text-lg  list-disc tracking-widest ml-8 mr-12">
-                <li className="">
-                  Provide the latest methodology with high-quality training and
-                  mentoring
-                </li>
-                <li className="">
-                  Build up the capacity and career of IT experts Cambodia
-                </li>
-                <li className="">
-                  Consult and connect CSTAD trainees to top IT careers
-                </li>
-              </ul>
-            </section>
-            {/* section vision  */}
-            <section>
-              <h1 className={`${style.title}`}>Vision</h1>
-              <ul className="lg:mt-4 lg:text-lg font-medium list-disc tracking-widest ml-8 mr-12">
-                <li className="">Advanced IT Center in Cambodia</li>
-              </ul>
-            </section>
-
-            {/* section vision  */}
-            <section>
-              <h1 className={`${style.title}`}>SLOGAN</h1>
-              <ul className="lg:mt-4 lg:text-lg font-medium list-disc tracking-widest ml-8 mr-12">
-                <li className="">Start your IT Career with CSTAD</li>
-              </ul>
-            </section>
+            {/* section mission, vision and slogan  */}
+            {missionVisionSloganList?.map((mission) => (
+              <div key={mission?.id}>
+                <h3 className={`${style.title}`}>{mission?.name}</h3>
+                <ul>
+                  {mission?.list?.map((list) => (
+                    <li className={`${style.decription}`}>
+                      <RiArrowRightDoubleLine className="flex-none w-10 mt-1 text-[#DF9A27]" />
+                      {list?.description}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
           {/* image */}
           <div>
-            <h1 className={`${style.title}`}>
+            <h3 className={`${style.title}`}>
               IF YOU HAVE ANY QUESTIONS, PLEASE FEEL FREE TO CONTACT US.
-            </h1>
+            </h3>
             <ul className="leading-loose">
-              <li className="line-clamp-1 flex items-center gap-2 hover:underline hover:underline-offset-4">
-                <RiMapPin2Fill className="h-6 w-6 text-[#253C95]" />
+              <li className={`${style.list}`}>
+                <RiMapPin2Fill className="flex-none w-10 mt-2 text-[#253C95]" />
                 No. 24, St. 562, Sangkat Boeung kak I, Khan Toul Kork, Phnom
                 Penh, Cambodia
               </li>
               <li className="flex items-center gap-2 hover:underline hover:underline-offset-4">
-                <RiPhoneFill className="h-6 w-6 text-[#253C95]" />
+                <RiPhoneFill className="flex-none w-10 mt-0 text-[#253C95]" />
                 (+855) 95 990 910 | (+855) 93 990 910
               </li>
               <li className="flex items-center gap-2 hover:underline hover:underline-offset-4">
-                <RiTelegramFill className="h-6 w-6 text-[#253C95]" />
+                <RiTelegramFill className="flex-none w-10 mt-0 text-[#253C95]" />
                 <a href="https://t.me/istadkh" target="_blank">
                   Telegram Channel
                 </a>
               </li>
               <li className="flex items-center gap-2 hover:underline hover:underline-offset-4">
-                <RiFacebookCircleFill className="h-6 w-6 text-[#253C95]" />
+                <RiFacebookCircleFill className="flex-none w-10 mt-0 text-[#253C95]" />
                 <a href="https://www.fb.com/istad.co" target="_blank">
                   Facebook
                 </a>
               </li>
               <li className="flex items-center gap-2 hover:underline hover:underline-offset-4">
-                <RiMailFill className="h-6 w-6 text-[#253C95]" />
+                <RiMailFill className="flex-none w-10 mt-0 text-[#253C95]" />
                 <a href="mailto: info.istad@gmail.com" target="_blank">
                   info.istad@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-2 hover:underline hover:underline-offset-4">
-                <RiGlobalFill className="h-6 w-6 text-[#253C95]" />
+                <RiGlobalFill className="flex-none w-10 mt-0 text-[#253C95]" />
                 <a href="https://www.istad.co" target="_blank">
                   www.istad.co
                 </a>
               </li>
               <li className="flex items-center gap-2 hover:underline hover:underline-offset-4">
-                <RiYoutubeFill className="h-6 w-6 text-[#253C95]" />
+                <RiYoutubeFill className="flex-none w-10 mt-0 text-[#253C95]" />
                 <a
                   href="https://www.youtube.com/channel/UCUaq9S8Gu4zteE-x77JT-kA"
                   target="_blank"
