@@ -74,7 +74,7 @@ export default function page() {
                 <h3 className={`${style.title}`}>{mission?.name}</h3>
                 <ul>
                   {mission?.list?.map((list) => (
-                    <li className={`${style.decription}`}>
+                    <li key={list.id} className={`${style.decription}`}>
                       <RiArrowRightDoubleLine className="flex-none w-10 mt-1 text-[#DF9A27]" />
                       {list?.description}
                     </li>

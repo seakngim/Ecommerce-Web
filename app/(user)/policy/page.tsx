@@ -37,7 +37,7 @@ export default function page() {
               </div>
               <div className="col-span-4">
               <ul>{policy?.list?.map((list)=>(
-                <li className={`${style.list}`}><RiCheckDoubleFill className="flex-none w-14 mt-1 text-[#253C95]" />{list?.description}</li>
+                <li key={list.id} className={`${style.list}`}><RiCheckDoubleFill className="flex-none w-14 mt-1 text-[#253C95]" />{list?.description}</li>
               ))}</ul>
 
               </div>
