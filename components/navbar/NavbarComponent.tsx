@@ -22,7 +22,7 @@ export default function HeaderComponent() {
       className="text-[#253C95] shadow-lg sticky top-0"
     >
       <div className="container mx-auto flex items-center justify-between">
-        <NavbarBrand href="https://istad.co/">
+        <NavbarBrand href="https://seakngim.sen-pai.live/">
           <Image
               width={40}
               height={40}

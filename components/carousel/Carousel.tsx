@@ -37,7 +37,7 @@ export default function CarouselComponent() {
 
   return (
     <AuroraBackground>
-      <Carousel className="h-screen">
+      <Carousel>
         {CarouselList?.map((carousellist) => (
           <div key={carousellist.id}>
             <motion.div
@@ -48,15 +48,15 @@ export default function CarouselComponent() {
                 duration: 0.8,
                 ease: "easeInOut",
               }}
-              className="relative flex flex-col gap-4 justify-center lg:px-60 md:px-40 sm:px-20 px-5"
+              className="relative flex flex-col gap-4 justify-center container mx-auto px-20"
             >
-              <h1 className="text-xl md:text-4xl lg:text-6xl font-bold text-[#253C95] dark:text-[#253C95]">
+              <h1 className="text-xl md:text-4xl font-bold text-[#253C95] dark:text-[#253C95]">
                 {carousellist.name}
               </h1>
-              <p className="font-extralight md:text-base text-sm dark:text-neutral-200 md:py-4 py-2">
+              <p className="font-extralight md:text-base text-sm dark:text-neutral-200 md:py-4 lg:mr-60 py-2">
                 {carousellist.description}
               </p>
-              <button className="bg-gradient-to-r from-[#253C95] to-blue-500 hover:from-blue-500 hover:to-[#253C95] rounded-full w-fit text-white dark:text-gray-50 my-8 px-4 py-2 duration-500">
+              <button className="bg-gradient-to-r from-[#253C95] to-blue-500 hover:from-blue-500 hover:to-[#253C95] rounded-full w-fit text-white dark:text-gray-50 lg:my-8 px-4 py-2 duration-500">
                 Enroll Now
               </button>
             </motion.div>

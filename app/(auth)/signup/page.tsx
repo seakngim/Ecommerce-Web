@@ -30,18 +30,18 @@ const initialValues: ValueTypes = {
 // 2- At least one lower case English letter, (?=.*[a-z])
 // 3- At least one digit, (?=.*\d)
 // 4- At least one special character, (?=.*[@#$%^&*])
-const strongPasswordRegex = new RegExp(
-  "^(?=.*[A-Z])(?=.*[a-z])(?=.*d)(?=.*[@#$%^&*]).{8,}$"
-);
+// const strongPasswordRegex = new RegExp(
+//   "^(?=.*[A-Z])(?=.*[a-z])(?=.*d)(?=.*[@#$%^&*]).{8,}$"
+// );
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().email("Invalid email").required("Required"),
   password1: Yup.string()
-    .min(8, "Password is too short, At lease 8 characters")
-    .matches(
-      strongPasswordRegex,
-      "Password must contain at [A-Z, a-z, @#$%^&*]"
-    )
+    // .min(8, "Password is too short, At lease 8 characters")
+    // .matches(
+    //   strongPasswordRegex,
+    //   "Password must contain at [A-Z, a-z, @#$%^&*]"
+    // )
     .required("Required"),
   password2: Yup.string()
     .oneOf([Yup.ref("password1")], "Passwords must match")

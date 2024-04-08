@@ -16,7 +16,7 @@ export default function FooterComponent() {
         <div className="grid w-full sm:flex sm:justify-between md:flex md:grid-cols-1">
           <div className="inline text-white">
             <FooterBrand
-              href="https://istad.co/"
+              href="https://seakngim.sen-pai.live/"
               src="https://istad.co/resources/img/logo_md.png"
               alt="Cstad Logo"
               width={10}

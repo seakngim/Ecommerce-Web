@@ -132,7 +132,7 @@ export default function Product() {
         }}
       >
         {({ setFieldValue }) => (
-          <Form className="bg-gray-50 p-4 rounded-lg grid grid-cols-2 gap-8 m-5 md:ml-20 mx-5">
+          <Form className="bg-gray-50 p-4 rounded-lg grid grid-cols-2 gap-8 m-5 mt-20 lg:m-5 mx-5">
             <h1 className={`${style.title}`}>Create Product</h1>
             {/* Product Name */}
             <div>
